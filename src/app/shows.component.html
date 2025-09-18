@@ -1,0 +1,15 @@
+<div class="input">
+  <input placeholder="Input tv show name" (input)="onInput($event)" />
+</div>
+<div class="shows">
+  @for (show of shows; track show.name) {
+  <div class="show">
+    <div class="name">{{ show.name }}</div>
+    <div class="actors">
+      @for (actor of show.actors; track $index) {
+      <div>{{ actor }}</div>
+      }
+    </div>
+  </div>
+  }
+</div>
